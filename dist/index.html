@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.ico" id="favicon" />
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="さんまを焼くだけのアプリ。" />
+    <meta
+      prpoerty="og:description"
+      content="さんまを焼くだけのアプリ。スマホは現在非対応"
+    />
+    <meta property="og:url" content="<%= BASE_URL %>" />
+    <meta
+      property="og:image"
+      content="https://user-images.githubusercontent.com/64998512/134558744-fdef8857-4a79-4afd-ace8-8581b962c5ce.png"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-10MMRYZ4PQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-10MMRYZ4PQ");
+    </script>
+    <title>さんまを焼くだけのアプリ</title>
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <div class="timer">
+        <div class="time">
+          <p class="counter">00.00</p>
+          <button
+            id="stopButton"
+            class="stop btn btn--yellow btn--circle"
+            type="button"
+            disabled
+          >
+            止
+          </button>
+        </div>
+      </div>
+      <div class="sanma">
+        <img id="nama" src="../images/nama.png" />
+        <img id="yaki" src="../images/yaki.png" />
+        <img id="koge" src="../images/koge.png" />
+      </div>
+
+      <!-- ReStart用Modalはじまり -->
+      <div
+        class="modal fade modal-dialog modal-fullscreen-sm-down"
+        id="resultModal"
+        tabindex="-1"
+        aria-labelledby="resultModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="resultModalLabel"></h5>
+            </div>
+            <div class="modal-body" id="resultmodalBody"></div>
+            <div class="modal-footer">
+              <button
+                id="reload"
+                type="button"
+                class="btn btn-secondary"
+                onclick="location.reload()"
+              >
+                再挑戦する
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ReStart用Modal終わり -->
+
+      <!-- Start用Modalはじまり -->
+      <div
+        class="modal fade modal-dialog modal-fullscreen-sm-down"
+        id="startModal"
+        tabindex="-1"
+        aria-labelledby="startModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="startModalLabel">さんまを焼く？</h5>
+            </div>
+            <div class="modal-body" id="startmodalBody">
+              <p>このアプリはたださんまを焼くアプリです。</p>
+              <p>焼き色を見ながら美味しいさんまを焼こう！</p>
+              <p>よく見てないと焦げるので要注意！</p>
+              <p>スマホは非対応!!!近々対応するかも？</p>
+              <a
+                href="https://twitter.com/intent/tweet?&text=さんまを焼くだけのくそアプリ。%0aパソコンから遊んでね。%0a%23さんま%0a%23さんまを焼く%0a%23さんまを焼くだけのアプリ%0a&url=https://gifted-curran-aecac2.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ツイートする</a
+              >
+            </div>
+            <div class="modal-footer">
+              <button id="start" type="button" class="btn btn-secondary">
+                さんまを焼く
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Start用Modal終わり -->
+    </div>
+    <footer></footer>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
