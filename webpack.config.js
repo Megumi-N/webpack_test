@@ -8,18 +8,18 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   mode: "development", //モード
-  module: {
-    rules: [
-      {
-        test: /\.css/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: { url: false },
-          },
-        ],
-      },
-    ],
-  },
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.css/,
+  //       use: [
+  //         "style-loader",
+  //         {
+  //           loader: "css-loader",
+  //           options: { url: false },
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 };
